@@ -49,9 +49,9 @@ db.getConnection((err, connection) => {
         name VARCHAR(255) NOT NULL,
         email VARCHAR(255) UNIQUE NOT NULL,
         password VARCHAR(255) NOT NULL,
-        phone VARCHAR(20) DEFAULT "",
-        address VARCHAR(500) DEFAULT "",
-        role VARCHAR(50) DEFAULT "Agent",
+        phone VARCHAR(20) DEFAULT '',
+        address VARCHAR(500) DEFAULT '',
+        role VARCHAR(50) DEFAULT 'Agent',
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       )
     `;
@@ -67,10 +67,10 @@ db.getConnection((err, connection) => {
         location VARCHAR(255),
         description TEXT,
         image_url LONGTEXT,
-        agent_name VARCHAR(255) DEFAULT "N/A",
-        agent_phone VARCHAR(20) DEFAULT "N/A",
-        agent_email VARCHAR(255) DEFAULT "N/A",
-        agent_address VARCHAR(500) DEFAULT "N/A",
+        agent_name VARCHAR(255) DEFAULT 'N/A',
+        agent_phone VARCHAR(20) DEFAULT 'N/A',
+        agent_email VARCHAR(255) DEFAULT 'N/A',
+        agent_address VARCHAR(500) DEFAULT 'N/A',
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
       )
@@ -104,9 +104,9 @@ app.post('/api/auth/register', (req, res) => {
       name VARCHAR(255) NOT NULL,
       email VARCHAR(255) UNIQUE NOT NULL,
       password VARCHAR(255) NOT NULL,
-      phone VARCHAR(20) DEFAULT "",
-      address VARCHAR(500) DEFAULT "",
-      role VARCHAR(50) DEFAULT "Agent",
+      phone VARCHAR(20) DEFAULT '',
+      address VARCHAR(500) DEFAULT '',
+      role VARCHAR(50) DEFAULT 'Agent',
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )
   `;
