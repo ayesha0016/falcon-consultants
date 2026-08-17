@@ -1,1 +1,5 @@
 node_modules/
+**/node_modules/
+falcon-frontend/node_modules/
+falcon-backend/node_modules/
+.env
