@@ -4,6 +4,7 @@ import { X, Phone, Mail } from 'lucide-react';
 const AgentContactModal = ({ property, onClose }) => {
   if (!property) return null;
 
+<<<<<<< HEAD
   // Base API URL handling dynamically from environment
   const BASE_URL = import.meta.env.VITE_API_URL || 'https://falcon-project-backend.vercel.app';
 
@@ -14,6 +15,8 @@ const AgentContactModal = ({ property, onClose }) => {
     return `${BASE_URL}${url.startsWith('/') ? '' : '/'}${url}`;
   };
 
+=======
+>>>>>>> f46df702731cb2b79da030a4e5ee375bc7c0cbe3
   return (
     <div style={{ 
       position: 'fixed', 
@@ -68,8 +71,13 @@ const AgentContactModal = ({ property, onClose }) => {
           position: 'relative' 
         }}>
           <img 
+<<<<<<< HEAD
             src={getImageUrl(property.image_url)} 
             alt={property.title || 'Property Image'} 
+=======
+            src={property.image_url && property.image_url.startsWith('data:image') ? property.image_url : (property.image_url || 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80')} 
+            alt={property.title} 
+>>>>>>> f46df702731cb2b79da030a4e5ee375bc7c0cbe3
             style={{ 
               width: '100%', 
               height: '100%', 
